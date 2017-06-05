@@ -1,0 +1,56 @@
+{
+  "name": "sports-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open:src": "babel-node tools/srcServer.js",
+    "lint": "node_modules/.bin/esw webpack.config.* src tools",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viktorolund/sports-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viktorolund/sports-app/issues"
+  },
+  "homepage": "https://github.com/viktorolund/sports-app#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "bootstrap": "3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "less": "^2.7.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "css-loader": "^0.28.4",
+    "eslint": "^3.19.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-react": "^7.0.1",
+    "express": "^4.15.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.2",
+    "less-loader": "^4.0.4",
+    "open": "^0.0.5",
+    "redux-devtools": "^3.4.0",
+    "standard-version": "^4.0.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-middleware": "^1.10.2",
+    "webpack-hot-middleware": "^2.18.0"
+  }
+}
