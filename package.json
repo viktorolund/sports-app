@@ -6,6 +6,11 @@
   "scripts": {
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "node_modules/.bin/rimraf ./dist",
+    "prebuild": "yarn clean-dist && cp src/index.html dist/index.html",
+    "build": "SET NODE_ENV=production&& babel-node tools/build.js",
+    "postbuild": "babel-node tools/distServer.js",
     "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -48,6 +53,7 @@
     "less-loader": "^4.0.4",
     "open": "^0.0.5",
     "redux-devtools": "^3.4.0",
+    "rimraf": "^2.6.1",
     "standard-version": "^4.0.0",
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",

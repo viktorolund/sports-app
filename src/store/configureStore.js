@@ -1,6 +1,7 @@
-if (process.env.NODE_ENV === 'production') {
+const __DEV__ = process.env.NODE_ENV !== 'production';
+
+if (__DEV__) {
   module.exports = require('./configureStore.prod');
 } else {
-  // (process.env.NODE_ENV === 'development')
   module.exports = require('./configureStore.dev');
 } 

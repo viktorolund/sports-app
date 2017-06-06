@@ -1,5 +1,4 @@
-// Root Reducer
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import sports from './sportReducer';
 import ajaxCallsInProgress from './ajaxStatusReducer';
 
