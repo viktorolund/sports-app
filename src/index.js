@@ -1,10 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
 import configureStore from './store/configureStore';
+import {Provider} from 'react-redux';
 
 import {loadSports} from './actions/sportActions';
 
-import SportsApp from './components/app';
+import App from './components/app';
 
 import './styles/main.less';
 import './styles/panel.less';
@@ -19,4 +20,9 @@ const store = configureStore(); // Optionally pass initial state here
 // Load sports as soon as application loads
 store.dispatch(loadSports());
 
-render(<SportsApp store={store} />, document.getElementById('sports-app'));
+render(
+    <Provider store={store}>
+        <App/>
+    </Provider>,
+    document.getElementById('sports-app')
+);

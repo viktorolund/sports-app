@@ -5,15 +5,17 @@ import {connect} from 'react-redux';
 import Header from './common/header';
 import SportPage from './sport/SportPage';
 
-class SportsApp extends React.Component {
+class App extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+    }
+
     render() {
         return (
             <div>
                 <div className="container">
                     <Header/>
-                    <Provider store={this.props.store}>
-                        <SportPage/>
-                    </Provider>
+                    <SportPage/>
                 </div>
             </div>
         );
@@ -26,4 +28,4 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-export default connect(mapStateToProps)(SportsApp);
+export default connect(mapStateToProps)(App);
