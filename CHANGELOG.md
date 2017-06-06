@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/viktorolund/sports-app/compare/v1.1.0...v1.1.1) (2017-06-06)
+
+
+### Bug Fixes
+
+* **index, app:** use provider at store ([e266385](https://github.com/viktorolund/sports-app/commit/e266385))
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0 (2017-06-05)
 
