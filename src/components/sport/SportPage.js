@@ -12,9 +12,11 @@ class SportPage extends React.Component {
     }
 
     render() {
+        const { sports } = this.props;
+
         return (
             <div>
-                <SportList sports={this.props.sports} />
+                <SportList sports={sports} />
             </div>
         );
     }

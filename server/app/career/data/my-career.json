@@ -1,0 +1,22 @@
+{
+    "career": {
+        "viktor" : {
+            "jobs": [
+                {
+                    "Telia": {
+                        "id": 1001,
+                        "description": "Applikationsprojekt som berört PHP, MySQL, Java, XML, JavaScript, Highcharts, html och CSS",
+                        "time": "2013-2015"
+                    }
+                },
+                {
+                    "Norrlands Universitetssjukhus": {
+                        "id": 1002,
+                        "description": "Webbutvecklare i AngularJS, JavaScript ES5 och ES2015, JSON, Highcharts, Node.js, html, CSS, Bootstrap",
+                        "time": "2015-Pågående"
+                    }
+                }
+            ]
+        }
+    }
+}

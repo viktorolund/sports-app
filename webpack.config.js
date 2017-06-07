@@ -1,14 +1,9 @@
 import webpack from 'webpack';
 import path from 'path';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
+import babelOptions from './config/babelConfig';
 
 const __DEV__ = process.env.NODE_ENV !== 'production';
-
-const extractLess = new ExtractTextPlugin({
-    filename: "[name].[contenthash].css",
-    disable: !__DEV__
-});
-
 const entry = [];
 const plugins = [];
 
@@ -30,7 +25,6 @@ if (!__DEV__) {
       }),
       new webpack.optimize.OccurrenceOrderPlugin(),
       new webpack.DefinePlugin(GLOBALS),
-      extractLess,
       new webpack.optimize.UglifyJsPlugin()
   );
 } else {
@@ -45,7 +39,6 @@ if (!__DEV__) {
         $: 'jquery',
         jQuery: 'jquery'
       }),
-      extractLess,
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoEmitOnErrorsPlugin()
   );
@@ -70,9 +63,7 @@ export default {
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
+          options: babelOptions
         }
       },
       {
@@ -88,16 +79,6 @@ export default {
         }, {
             loader: "less-loader" // compiles Less to CSS
         }]
-        // test: /\.less$/,
-        // use: extractLess.extract({
-        //     use: [{
-        //         loader: "css-loader"
-        //     }, {
-        //         loader: "less-loader"
-        //     }],
-        //     // use style-loader in development
-        //     fallback: "style-loader"
-        // })
       },
       {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,

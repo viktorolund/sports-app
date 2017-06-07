@@ -5,7 +5,7 @@ const SportList = ({sports}) => {
   return (
     <div>
         {
-            sports.map(sport => 
+            sports.map(sport =>
                 <SportListRow key={sport.id} sport={sport} />
             )
         }

@@ -14,10 +14,8 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
-const store = configureStore(); // Optionally pass initial state here
-// Enables our container components connect to the redux store
+const store = configureStore();
 
-// Load sports as soon as application loads
 store.dispatch(loadSports());
 
 render(

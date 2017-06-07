@@ -5,13 +5,11 @@ const SportListRow = ({sport}) => {
   return (
     <div>
         <div className="row">
-            <div className="col-xs-12">
-                {sport.category}
+            <div className="col-xs-2">
+                <strong>{sport.time}</strong>
             </div>
-        </div>
-        <div className="row">
-            <div className="col-xs-12">
-                {sport.name}
+            <div className="col-xs-10">
+                <strong>{sport.description}</strong>
             </div>
         </div>
     </div>
