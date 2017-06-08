@@ -1,21 +1,31 @@
 import React from 'react';
-import {Provider} from 'react-redux';
-import {connect} from 'react-redux';
+import { connect, Provider } from 'react-redux';
 
-import Header from './common/header';
-import SportPage from './sport/SportPage';
+import Menu from './common/menu';
+
+import Aboutme from './sections/aboutme';
+import Knowledge from './sections/knowledge';
+import Experience from './sections/experience';
+import Footer from './sections/footer';
 
 class App extends React.Component {
     constructor(props, context) {
         super(props, context);
     }
 
+    componentDidMount() {
+        require('../services/fullpage-config');
+    }
+
     render() {
         return (
             <div>
-                <div className="container">
-                    <Header/>
-                    <SportPage/>
+                <Menu/>
+                <div id="fullpage">
+                    <Aboutme/>
+                    <Knowledge/>
+                    <Experience/>
+                    <Footer/>
                 </div>
             </div>
         );

@@ -1,4 +1,4 @@
 export default {
-  sports: [],
+  career: [],
   numAjaxCallsInProgress: 0
 };

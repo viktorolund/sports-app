@@ -1,25 +1,25 @@
 import * as actionTypes from './actionTypes';
 import {beginAjaxCall, ajaxCallError} from './ajaxStatusActions';
 
-export function loadSportsSuccess(sports) {
+export function loadCareerSuccess(career) {
   return {
-    type: actionTypes.LOAD_SPORTS_SUCCESS,
-    sports
+    type: actionTypes.LOAD_CAREER_SUCCESS,
+    career
   };
 }
 
-export function loadSports() {
+export function loadCareer() {
   return function(dispatch) {
 
     dispatch(beginAjaxCall());
 
     if (process.env.NODE_ENV !== 'production') {
-        const srcOfSports = require('../../server/app/career/data/my-career');
+        const srcOfloadCareer = require('../../server/app/career/data/my-career');
 
         return new Promise((resolve, reject) => {
-            resolve(Object.assign([], srcOfSports));
-        }).then((sports) => {
-            dispatch(loadSportsSuccess(sports));
+            resolve(Object.assign([], srcOfloadCareer));
+        }).then((career) => {
+            dispatch(loadCareerSuccess(career));
         }).catch(error => {
             dispatch(ajaxCallError(error));
             throw(error);
@@ -40,8 +40,8 @@ export function loadSports() {
                 reject(error);
             });
 
-        }).then((sports) => {
-            dispatch(loadSportsSuccess(sports));
+        }).then((career) => {
+            dispatch(loadCareerSuccess(career));
         }).catch(error => {
             dispatch(ajaxCallError(error));
             throw(error);

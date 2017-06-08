@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import sports from './sportReducer';
+import career from './careerReducer';
 import ajaxCallsInProgress from './ajaxStatusReducer';
 
 const rootReducer = combineReducers({
-  sports,
+  career,
   ajaxCallsInProgress
 });
 
