@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Aboutme = () => {
-  return (
-    <div>
-        <div className="section center-section" id="section0">
-            <div className="container">
+class Aboutme extends React.Component {
+    render() {
+        return (
+            <div>
                 <div className="row">
                     <div className="col-xs-12">
                         <div className="row">
@@ -45,9 +44,8 @@ const Aboutme = () => {
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-  );
-};
+        );
+    }
+}
 
 export default Aboutme;

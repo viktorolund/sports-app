@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Knowledge = () => {
-  return (
-    <div>
-        <div className="section" id="section1">
-            <div className="container">
+class Knowledge extends React.Component {
+    render() {
+        return (
+            <div>
                 <div className="row">
                     <div className="col-xs-12">
 
@@ -193,9 +192,8 @@ const Knowledge = () => {
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-  );
-};
+        );
+    }
+}
 
 export default Knowledge;
