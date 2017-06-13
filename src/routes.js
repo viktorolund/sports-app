@@ -1,15 +1,26 @@
 import React from 'react';
-import {Route, IndexRoute} from 'react-router';
-import App from './components/app';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
 import Aboutme from './components/about/aboutme';
 import Knowledge from './components/knowledge/knowledge';
 import Experience from './components/experience/experience';
+import Menu from './components/common/menu';
 
-export default (
-  <Route path="/" component={App}>
-    <IndexRoute component={Aboutme}/>
-    <Route path="knowledge" component={Knowledge}/>
-    <Route path="career" component={Experience}/>
-  </Route>
+const history = createBrowserHistory();
+
+const AppRouter = () => (
+    <Router history={history}>
+        <div>
+            <Menu/>
+
+            <Route exact path='/' component={Aboutme} />
+            <Route path='/knowledge' component={Knowledge} />
+            <Route path='/career' component={Experience} />
+
+        </div>
+    </Router>
 );
+
+export default AppRouter;
+

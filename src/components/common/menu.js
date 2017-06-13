@@ -1,16 +1,8 @@
 import React from 'react';
-import {Link, IndexLink} from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   return (
-      <nav>
-        <IndexLink to="/" activeClassName="active">Om</IndexLink>
-
-        <Link to="/knowledge" activeClassName="active">Kunskaper</Link>
-
-        <Link to="/career" activeClassName="active">Karriär</Link>
-      </nav>
-      /*
     <div>
         <div className="navbar navbar-default navbar-static-top">
             <div className="container">
@@ -26,20 +18,20 @@ const Menu = () => {
 
                 <div className="collapse navbar-collapse" id="page-navbar">
                     <ul id="bsmenu" className="nav navbar-nav">
-                        <li className="active">
-                            <IndexLink to="/" activeClassName="active">Om</IndexLink>
+                        <li>
+                            <Link to="/">Om</Link>
                         </li>
                         <li>
-                            <Link to="/knowledge" activeClassName="active">Kunskaper</Link>
+                            <Link to="/knowledge">Kunskaper</Link>
                         </li>
                         <li>
-                            <Link to="/career" activeClassName="active">Karriär</Link>
+                            <Link to="/career">Karriär</Link>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>*/
+    </div>
   );
 };
 

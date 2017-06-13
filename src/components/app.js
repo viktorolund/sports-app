@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect, Provider } from 'react-redux';
 
-import Menu from './common/menu';
+import AppRouter from '../routes';
+
 import Footer from './common/footer';
 
 class App extends React.Component {
@@ -12,9 +13,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Menu/>
-
-                {this.props.children}
+                <AppRouter/>
             </div>
         );
     }
