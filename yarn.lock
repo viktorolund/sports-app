@@ -2274,6 +2274,10 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+hamburgers@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/hamburgers/-/hamburgers-0.8.1.tgz#c99dbd1f031c1da25c0458d0ba94bf708f97baef"
+
 handlebars@^4.0.2:
   version "4.0.10"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.10.tgz#3d30c718b09a3d96f23ea4cc1f403c4d3ba9ff4f"

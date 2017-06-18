@@ -8,6 +8,7 @@ require('./images/page_logo.ico');
 
 import './styles/main.less';
 import './styles/panel.less';
+import 'hamburgers/dist/hamburgers.css';
 
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
