@@ -6,7 +6,7 @@ class Menu extends React.Component {
         super(props, context);
 
         this.state = {
-            menuIsActive: ''
+            menuIsActive: false
         };
 
         this.menuToggle = this.menuToggle.bind(this);
