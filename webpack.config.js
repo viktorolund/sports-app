@@ -23,6 +23,7 @@ if (!__DEV__) {
         $: 'jquery',
         jQuery: 'jquery'
       }),
+      new webpack.optimize.ModuleConcatenationPlugin(),
       new webpack.optimize.OccurrenceOrderPlugin(),
       new webpack.DefinePlugin(GLOBALS),
       new webpack.optimize.UglifyJsPlugin()
@@ -39,6 +40,7 @@ if (!__DEV__) {
         $: 'jquery',
         jQuery: 'jquery'
       }),
+      new webpack.optimize.ModuleConcatenationPlugin(),
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoEmitOnErrorsPlugin()
   );
