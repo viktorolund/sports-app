@@ -13,11 +13,9 @@ const AppRouter = () => (
     <Router history={history}>
         <div>
             <Menu/>
-
             <Route exact path='/' component={Aboutme} />
             <Route path='/knowledge' component={Knowledge} />
             <Route path='/career' component={Experience} />
-
         </div>
     </Router>
 )

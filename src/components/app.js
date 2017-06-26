@@ -2,7 +2,6 @@ import React from 'react'
 import { connect, Provider } from 'react-redux'
 
 import AppRouter from '../routes'
-
 import Footer from './common/footer'
 
 class App extends React.Component {
@@ -14,6 +13,7 @@ class App extends React.Component {
         return (
             <div>
                 <AppRouter/>
+                <Footer/>
             </div>
         )
     }

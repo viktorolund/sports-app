@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-        <div className="section fp-auto-height" id="section3">
+        <div className="navbar navbar-fixed-bottom">
             <div className="page-footer">
                 <div className="container">
                     <div className="row">
