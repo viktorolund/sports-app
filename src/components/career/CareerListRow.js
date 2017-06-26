@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const CareerListRow = ({myCareer}) => {
   return (
@@ -13,11 +13,11 @@ const CareerListRow = ({myCareer}) => {
             </div>
         </div>
     </div>
-  );
-};
+  )
+}
 
 CareerListRow.propTypes = {
     myCareer: PropTypes.object.isRequired
-};
+}
 
-export default CareerListRow;
+export default CareerListRow

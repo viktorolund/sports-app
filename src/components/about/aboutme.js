@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 class Aboutme extends React.Component {
     render() {
@@ -44,8 +44,8 @@ class Aboutme extends React.Component {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default Aboutme;
+export default Aboutme

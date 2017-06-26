@@ -1,23 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 class Menu extends React.Component {
     constructor(props, context) {
-        super(props, context);
+        super(props, context)
 
         this.state = {
             menuIsActive: false
-        };
+        }
 
-        this.menuToggle = this.menuToggle.bind(this);
+        this.menuToggle = this.menuToggle.bind(this)
     }
 
     menuToggle() {
-        const isMenuActive = !this.state.menuIsActive;
+        const isMenuActive = !this.state.menuIsActive
 
         this.setState({
             menuIsActive: isMenuActive ? 'is-active': ''
-        });
+        })
     }
 
     render() {
@@ -54,8 +54,8 @@ class Menu extends React.Component {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default Menu;
+export default Menu

@@ -1,5 +1,5 @@
-import React from 'react';
-import CareerListRow from './CareerListRow';
+import React from 'react'
+import CareerListRow from './CareerListRow'
 
 const CareerList = ({career}) => {
   return (
@@ -10,7 +10,7 @@ const CareerList = ({career}) => {
             )
         }
     </div>
-  );
-};
+  )
+}
 
-export default CareerList;
+export default CareerList

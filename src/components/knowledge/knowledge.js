@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 class Knowledge extends React.Component {
     render() {
@@ -192,8 +192,8 @@ class Knowledge extends React.Component {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default Knowledge;
+export default Knowledge
