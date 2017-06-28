@@ -17,12 +17,12 @@ const Footer = () => {
                                         <span className="lead">Utbildning</span>
                                     </div>
                                     <div className="col-xs-3">
-                                        <span className="lead">Repositories <i className="fa fa-github fa-lg" aria-hidden="true"></i></span>
+                                        <span className="lead">Repositories <i className="fa fa-github fa-lg" aria-hidden="true" /></span>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-xs-3">
-                                        <span><i className="fa fa-envelope-o fa-lg" aria-hidden="true"></i></span>
+                                        <span><i className="fa fa-envelope-o fa-lg" aria-hidden="true" /></span>
                                         <span> viktorolund@gmail.com</span>
                                     </div>
                                     <div className="col-xs-3">
@@ -34,7 +34,7 @@ const Footer = () => {
                                 </div>
                                 <div className="row">
                                     <div className="col-xs-6">
-                                        <span><i className="fa fa-phone-square fa-lg" aria-hidden="true"></i></span>
+                                        <span><i className="fa fa-phone-square fa-lg" aria-hidden="true" /></span>
                                         <span> 076 8240713</span>
                                     </div>
                                 </div>
@@ -55,7 +55,7 @@ const Footer = () => {
                                 </div>
                                 <div className="row">
                                     <div className="col-xs-6">
-                                        <span><i className="fa fa-envelope-o fa-lg" aria-hidden="true"></i></span>
+                                        <span><i className="fa fa-envelope-o fa-lg" aria-hidden="true" /></span>
                                         <span> viktorolund@gmail.com</span>
                                     </div>
                                     <div className="col-xs-6">
@@ -64,13 +64,13 @@ const Footer = () => {
                                 </div>
                                 <div className="row">
                                     <div className="col-xs-6">
-                                        <span><i className="fa fa-phone-square fa-lg" aria-hidden="true"></i></span>
+                                        <span><i className="fa fa-phone-square fa-lg" aria-hidden="true" /></span>
                                         <span> 076 8240713</span>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-xs-6 col-xs-offset-6">
-                                        <span className="lead">Repositories <i className="fa fa-github fa-lg" aria-hidden="true"></i></span>
+                                        <span className="lead">Repositories <i className="fa fa-github fa-lg" aria-hidden="true" /></span>
                                     </div>
                                 </div>
                                 <div className="row">

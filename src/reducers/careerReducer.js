@@ -3,7 +3,7 @@ import initialState from './initialState'
 
 export default function careerReducer(state = initialState.career, action) {
   switch (action.type) {
-    case actionTypes.LOAD_CAREER_SUCCESS:
+    case actionTypes.LOAD_CAREER_SUCCESS: {
 
         const careerData = []
 
@@ -20,7 +20,7 @@ export default function careerReducer(state = initialState.career, action) {
             ...state,
             ...careerData
         ]
-
+    }
     default:
       return state
   }

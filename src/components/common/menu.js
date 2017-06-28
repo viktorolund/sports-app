@@ -32,10 +32,10 @@ class Menu extends React.Component {
                                 data-toggle="collapse"
                                 data-target="#page-navbar">
                                 <span className="hamburger-box">
-                                    <span className="hamburger-inner"></span>
+                                    <span className="hamburger-inner" />
                                 </span>
                             </button>
-                            <a href="/" className="navbar-brand hidden-xs"><img className="logo-small" src={require("../../images/page_logo.png")}></img></a>
+                            <a href="/" className="navbar-brand hidden-xs"><img className="logo-small" src={require("../../images/page_logo.png")} /></a>
                         </div>
 
                         <div className="collapse navbar-collapse" id="page-navbar">

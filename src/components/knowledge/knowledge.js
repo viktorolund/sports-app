@@ -12,7 +12,7 @@ class Knowledge extends React.Component {
                             <div className="panel panel-default">
                                 <div className="panel-heading collapsable" data-parent="#accordion" data-toggle="collapse" data-target="#webb">
                                     <h4 className="panel-title">
-                                        <a className="accordion-toggle">Webb <i className="fa fa-chrome fa-lg" aria-hidden="true"></i></a>
+                                        <a className="accordion-toggle">Webb <i className="fa fa-chrome fa-lg" aria-hidden="true" /></a>
                                     </h4>
                                 </div>
                                 <div id="webb" className="panel-collapse collapse in">
@@ -107,7 +107,7 @@ class Knowledge extends React.Component {
                             <div className="panel panel-default">
                                 <div className="panel-heading collapsable" data-parent="#accordion" data-toggle="collapse" data-target="#testing">
                                     <h4 className="panel-title">
-                                        <a className="accordion-toggle collapsed">Testing <i className="fa fa-check-circle fa-lg fa-icon-success" aria-hidden="true"></i></a>
+                                        <a className="accordion-toggle collapsed">Testing <i className="fa fa-check-circle fa-lg fa-icon-success" aria-hidden="true" /></a>
                                     </h4>
                                 </div>
                                 <div id="testing" className="panel-collapse collapse">
@@ -152,7 +152,7 @@ class Knowledge extends React.Component {
                             <div className="panel panel-default">
                                 <div className="panel-heading collapsable" data-parent="#accordion" data-toggle="collapse" data-target="#proglang">
                                     <h4 className="panel-title">
-                                        <a className="accordion-toggle collapsed">Programspråk och databaser <i className="fa fa-terminal fa-lg" aria-hidden="true"></i></a>
+                                        <a className="accordion-toggle collapsed">Programspråk och databaser <i className="fa fa-terminal fa-lg" aria-hidden="true" /></a>
                                     </h4>
                                 </div>
                                 <div id="proglang" className="panel-collapse collapse">

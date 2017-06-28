@@ -8,7 +8,7 @@ class Aboutme extends React.Component {
                     <div className="col-xs-12">
                         <div className="row">
                             <div className="col-xs-6 col-xs-offset-3">
-                                <span><i className="fa fa-code-fork fa-2x" aria-hidden="true"></i></span>
+                                <span><i className="fa fa-code-fork fa-2x" aria-hidden="true" /></span>
                             </div>
                         </div>
                         <div className="row hidden-xs hidden-sm">
@@ -21,13 +21,13 @@ class Aboutme extends React.Component {
                                 </div>
                             </div>
                             <div className="col-xs-6">
-                                <img src={require("../../images/viktorolund.jpg")} className="img-size-md img-circle img-responsive" alt="viktor olund"></img>
+                                <img src={require("../../images/viktorolund.jpg")} className="img-size-md img-circle img-responsive" alt="viktor olund" />
                             </div>
                         </div>
                         <div className="hidden-lg hidden-md">
                             <div className="row">
                                 <div className="col-xs-6 col-xs-offset-3">
-                                    <img src={require("../../images/viktorolund.jpg")} className="img-size-md img-circle img-responsive" alt="viktor olund"></img>
+                                    <img src={require("../../images/viktorolund.jpg")} className="img-size-md img-circle img-responsive" alt="viktor olund" />
                                 </div>
                             </div>
                             <div className="row">
