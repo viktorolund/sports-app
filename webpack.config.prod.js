@@ -1,11 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import babelOptions from './config/babelConfig';
-
-const GLOBALS = {
-    'process.env.NODE_ENV': JSON.stringify('production'), //This global makes sure React is built in prod mode. https://facebook.github.io/react/downloads.html
-    __DEV__: false // potentially useful for feature flags. More info: https://github.com/petehunt/webpack-howto#6-feature-flags
-};
 
 export default {
   entry: [
@@ -56,9 +52,15 @@ export default {
         $: 'jquery',
         jQuery: 'jquery'
       }),
+      new HtmlWebpackPlugin({
+          inject: false,
+          template: './src/index.html'
+      }),
+      new webpack.DefinePlugin({
+          'process.env.NODE_ENV': JSON.stringify('production')
+      }),
       new webpack.optimize.ModuleConcatenationPlugin(),
-      new webpack.optimize.OccurrenceOrderPlugin(),
-      new webpack.DefinePlugin(GLOBALS),
-      new webpack.optimize.UglifyJsPlugin()
+      new webpack.optimize.UglifyJsPlugin(),
+      new webpack.optimize.OccurrenceOrderPlugin()
   ]
 };
