@@ -6,13 +6,13 @@
   "scripts": {
     "test": "jest",
     "start": "babel-node tools/srcServer.js",
-    "lint": "eslint webpack.config src tools",
+    "lint": "eslint webpack.config.* src tools",
     "remove-dist": "rimraf ./dist",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "copy:html": "cp ./src/index.html ./dist/index.html",
     "build:server": "node ./server/index.js",
     "prebuild": "npm run clean-dist && npm run copy:html",
-    "build": "SET NODE_ENV=production&& babel-node tools/build.js",
+    "build": "babel-node tools/build.js",
     "postbuild": "npm run build:server",
     "release": "standard-version"
   },

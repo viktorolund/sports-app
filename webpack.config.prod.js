@@ -1,54 +1,17 @@
 import webpack from 'webpack';
 import path from 'path';
-
 import babelOptions from './config/babelConfig';
 
-const __DEV__ = process.env.NODE_ENV !== 'production';
-const entry = [];
-const plugins = [];
-
-if (!__DEV__) {
-  entry.push(
-    'babel-polyfill',
-    './src/index'
-  );
-
-  const GLOBALS = {
+const GLOBALS = {
     'process.env.NODE_ENV': JSON.stringify('production'), //This global makes sure React is built in prod mode. https://facebook.github.io/react/downloads.html
     __DEV__: false // potentially useful for feature flags. More info: https://github.com/petehunt/webpack-howto#6-feature-flags
-  };
-
-  plugins.push(
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery'
-      }),
-      new webpack.optimize.ModuleConcatenationPlugin(),
-      new webpack.optimize.OccurrenceOrderPlugin(),
-      new webpack.DefinePlugin(GLOBALS),
-      new webpack.optimize.UglifyJsPlugin()
-  );
-} else {
-  entry.push(
-    'babel-polyfill',
-    'webpack-hot-middleware/client?reload=true',
-    './src/index'
-  );
-
-  plugins.push(
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery'
-      }),
-      new webpack.optimize.ModuleConcatenationPlugin(),
-      new webpack.HotModuleReplacementPlugin(),
-      new webpack.NoEmitOnErrorsPlugin()
-  );
-}
+};
 
 export default {
-  devtool: __DEV__ ? 'cheap-eval-source-map' : false,
-  entry: entry,
+  entry: [
+    'babel-polyfill',
+    './src/index'
+  ],
   target: 'web',
   output: {
     path: __dirname + '/dist',
@@ -56,7 +19,7 @@ export default {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: __DEV__ ? './src' : './dist'
+    contentBase: './dist'
   },
   module: {
     rules: [
@@ -88,5 +51,14 @@ export default {
       }
     ]
   },
-  plugins: plugins
+  plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
+      }),
+      new webpack.optimize.ModuleConcatenationPlugin(),
+      new webpack.optimize.OccurrenceOrderPlugin(),
+      new webpack.DefinePlugin(GLOBALS),
+      new webpack.optimize.UglifyJsPlugin()
+  ]
 };
