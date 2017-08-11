@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import path from 'path';
-import babelOptions from './config/babelConfig';
 
 export default {
   devtool: 'cheap-eval-source-map',
@@ -24,8 +23,10 @@ export default {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
-          options: babelOptions
+            loader: 'babel-loader',
+            options: {
+                babelrc: true
+            }
         }
       },
       {

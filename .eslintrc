@@ -3,7 +3,8 @@
     "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "experimentalObjectRestSpread": true
     }
   },
   "extends": [
@@ -26,7 +27,7 @@
     "semi": [0, "always"],
     "no-trailing-spaces": 0,
     "eol-last": 0,
-    "no-unused-vars": 0,
+    "no-unused-vars": 2,
     "no-underscore-dangle": 0,
     "no-alert": 0,
     "no-lone-blocks": 0,

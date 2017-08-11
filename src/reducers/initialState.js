@@ -1,4 +1,5 @@
 export default {
   career: [],
-  numAjaxCallsInProgress: 0
+  numAjaxCallsInProgress: 0,
+  menuActive: false
 }

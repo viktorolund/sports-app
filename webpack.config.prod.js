@@ -1,7 +1,6 @@
 import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import babelOptions from './config/babelConfig';
 
 export default {
   entry: [
@@ -23,8 +22,10 @@ export default {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
-          options: babelOptions
+            loader: 'babel-loader',
+            options: {
+                babelrc: true
+            }
         }
       },
       {

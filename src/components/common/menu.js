@@ -1,23 +1,18 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { toggleMenu } from '../../actions/menuToggleActions'
 
 class Menu extends React.Component {
     constructor(props, context) {
         super(props, context)
 
-        this.state = {
-            menuIsActive: false
-        }
-
         this.menuToggle = this.menuToggle.bind(this)
     }
 
     menuToggle() {
-        const isMenuActive = !this.state.menuIsActive
-
-        this.setState({
-            menuIsActive: isMenuActive ? 'is-active': ''
-        })
+        this.props.toggleMenu()
     }
 
     render() {
@@ -27,7 +22,7 @@ class Menu extends React.Component {
                     <div className="container">
                         <div className="navbar-header">
                             <button type="button"
-                                className={`navbar-toggle hamburger hamburger--collapse ${this.state.menuIsActive}`}
+                                className={`navbar-toggle hamburger hamburger--collapse ${this.props.menuActive ? 'is-active' : ''}`}
                                 onClick={(this.menuToggle)}
                                 data-toggle="collapse"
                                 data-target="#page-navbar">
@@ -58,4 +53,20 @@ class Menu extends React.Component {
     }
 }
 
-export default Menu
+Menu.PropTypes = {
+    menuActive: PropTypes.bool.isRequired
+}
+
+function mapStateToProps(state) {
+    return {
+        menuActive: state.menuActive
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        toggleMenu: () => dispatch(toggleMenu())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Menu)
