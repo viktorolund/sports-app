@@ -1,21 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import CareerListRow from './CareerListRow'
+import React from "react";
+import PropTypes from "prop-types";
+import CareerListRow from "./CareerListRow";
 
-const CareerList = ({career}) => {
+const CareerList = ({ career }) => {
   return (
     <div>
-        {
-            career.map(myCareer =>
-                <CareerListRow key={myCareer.id} myCareer={myCareer} />
-            )
-        }
+      {career.map(myCareer =>
+        <CareerListRow key={myCareer.id} myCareer={myCareer} />
+      )}
     </div>
-  )
-}
+  );
+};
 
 CareerList.propTypes = {
-    career: PropTypes.array
-}
+  career: PropTypes.array
+};
 
-export default CareerList
+export default CareerList;

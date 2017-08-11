@@ -8,6 +8,7 @@
     }
   },
   "extends": [
+    "prettier",
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings"
@@ -20,6 +21,7 @@
     "jest": true
   },
   "rules": {
+    "prettier/prettier": "error",
     "quotes": 0,
     "no-console": 1,
     "no-debugger": 1,
@@ -63,6 +65,7 @@
     "react/sort-comp": 1
   },
   "plugins": [
+    "prettier",
     "import",
     "react"
   ]

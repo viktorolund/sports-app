@@ -1,7 +1,7 @@
-import * as actionTypes from './actionTypes'
+import * as actionTypes from "./actionTypes";
 
 export function toggleMenu() {
   return {
     type: actionTypes.TOGGLE_MENU
-  }
+  };
 }

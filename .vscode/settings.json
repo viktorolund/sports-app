@@ -1,6 +1,4 @@
 {
-    "eslint.enable": true,
-    "eslint.options": {
-        "configFile": ".eslintrc"
-    }
+  "prettier.eslintIntegration": true,
+  "editor.formatOnSave": true
 }
