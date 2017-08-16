@@ -64,7 +64,8 @@ class Menu extends React.Component {
 }
 
 Menu.PropTypes = {
-  menuActive: PropTypes.bool.isRequired
+  menuActive: PropTypes.bool,
+  toggleMenu: PropTypes.func
 };
 
 function mapStateToProps(state) {
