@@ -1,5 +1,5 @@
-@field-margin-top: 25px;
-@fa-success-color: #5cb85c;
+$field-margin-top: 25px;
+$fa-success-color: #5cb85c;
 
 html {
   height: 100%;
@@ -57,9 +57,9 @@ body {
 }
 
 .field-margin {
-  margin-top: @field-margin-top;
+  margin-top: $field-margin-top;
 }
 
 .fa-icon-success {
-  color: @fa-success-color;
+  color: $fa-success-color;
 }
