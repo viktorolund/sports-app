@@ -5,8 +5,8 @@ import AppRouter from "../routes";
 import Footer from "./common/footer";
 
 class App extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
   }
 
   render() {

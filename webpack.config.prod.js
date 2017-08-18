@@ -52,11 +52,20 @@ export default {
         })
       },
       {
-        test: /\.(jpe?g|png|ico|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        test: /\.(jpg|png|gif|ico)$/,
         use: {
           loader: "file-loader",
           options: {
             name: "[path][name].[ext]"
+          }
+        }
+      },
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[path][name].[ext]?[hash]"
           }
         }
       }

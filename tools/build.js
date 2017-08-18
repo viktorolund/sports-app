@@ -1,33 +1,38 @@
 /*eslint-disable no-console */
 import webpack from "webpack";
 import webpackConfig from "../webpack.config.prod";
+import { winstonConsoleLogger } from "./WinstonLogger";
 
-process.env.NODE_ENV = "production"; // this assures the Babel dev config (for hot reloading) doesn't apply.
+process.env.NODE_ENV = "production";
 
-console.log(
-  "Generating minified bundle for production via Webpack. This will take a moment..."
+winstonConsoleLogger.info("Building app in productionmode");
+winstonConsoleLogger.info(
+  "Generating minified bundle for production via Webpack.."
 );
 
 webpack(webpackConfig).run((err, stats) => {
   if (err) {
-    console.log(err);
+    console.info(err);
     return 1;
   }
 
   const jsonStats = stats.toJson();
 
   if (jsonStats.hasErrors) {
-    return jsonStats.errors.map(error => console.log(error));
+    return jsonStats.errors.map(error => winstonConsoleLogger.error(error));
   }
 
   if (jsonStats.hasWarnings) {
-    console.log("Webpack generated the following warnings: ");
-    jsonStats.warnings.map(warning => console.log(warning));
+    jsonStats.warnings.map(warning =>
+      winstonConsoleLogger.warning(
+        `Webpack generated the following warnings: ${warning}`
+      )
+    );
   }
 
-  console.log(`Webpack stats: ${stats}`);
+  winstonConsoleLogger.info(`Webpack stats: ${stats}`);
 
-  console.log(
+  winstonConsoleLogger.silly(
     "Your app has been compiled in production mode and written to /dist. It's ready to roll!"
   );
 

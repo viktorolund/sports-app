@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleMenu } from "../../actions/menuToggleActions";
 
-class Menu extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+class Menu extends React.PureComponent {
+  constructor(props) {
+    super(props);
 
     this.menuToggle = this.menuToggle.bind(this);
   }

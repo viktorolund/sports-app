@@ -7,8 +7,8 @@ import * as careerActions from "../../actions/careerActions";
 import CareerList from "./CareerList";
 
 class CareerPage extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
   }
 
   render() {
