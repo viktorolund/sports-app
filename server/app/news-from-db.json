@@ -1,0 +1,26 @@
+{
+  "soccer": {
+    "premierleague": {
+      "games": [
+        {
+          "id": 1,
+          "match": "Arsenal - Chelsea",
+          "score": "0 - 2",
+          "goalscorers": [
+            {
+              "playerId": 843,
+              "player": "Didier Drogba",
+              "minute": 67
+            },
+            {
+              "playerId": 844,
+              "player": "Eden Hazard",
+              "minute": 89
+            }
+          ]
+        }
+      ],
+      "standings": {}
+    }
+  }
+}

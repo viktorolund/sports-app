@@ -49,6 +49,9 @@ class Menu extends React.PureComponent {
                   <Link to="/">Om</Link>
                 </li>
                 <li>
+                  <Link to="/news">Nyheter</Link>
+                </li>
+                <li>
                   <Link to="/knowledge">Kunskaper</Link>
                 </li>
                 <li>
