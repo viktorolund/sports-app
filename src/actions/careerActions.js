@@ -9,46 +9,34 @@ export function loadCareerSuccess(career) {
 }
 
 export function loadCareer() {
-  return function(dispatch) {
+  return dispatch => {
     dispatch(beginAjaxCall());
 
     if (process.env.NODE_ENV !== "production") {
       const srcOfloadCareer = require("../../server/app/career/data/my-career");
 
-      return new Promise((resolve, reject) => {
-        resolve(srcOfloadCareer);
-      })
-        .then(career => {
-          dispatch(loadCareerSuccess(career));
-        })
-        .catch(error => {
-          dispatch(ajaxCallError(error));
-          throw error;
-        });
+      try {
+        dispatch(loadCareerSuccess(srcOfloadCareer));
+      } catch (err) {
+        dispatch(ajaxCallError(err));
+        throw err;
+      }
     } else {
-      return new Promise((resolve, reject) => {
-        $.ajax({
-          type: "GET",
-          url: "api/career",
-          headers: {
-            "Content-Type": "application/json"
-          }
-        }).then(
-          response => {
-            resolve(response);
-          },
-          error => {
-            reject(error);
-          }
-        );
-      })
-        .then(career => {
+      $.ajax({
+        type: "GET",
+        url: "api/career",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }).then(
+        career => {
           dispatch(loadCareerSuccess(career));
-        })
-        .catch(error => {
-          dispatch(ajaxCallError(error));
-          throw error;
-        });
+        },
+        err => {
+          dispatch(ajaxCallError(err));
+          throw err;
+        }
+      );
     }
   };
 }
