@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
 import configureStore from "./store/configureStore";
-import App from "./components/app";
+import App from "./components/App";
 import { loadCareer } from "./actions/careerActions";
 
 const store = configureStore();

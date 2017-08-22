@@ -20,7 +20,7 @@ class News extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         {this.news && <NewsList news={this.news} />}
       </div>
     );

@@ -15,7 +15,7 @@ class CareerPage extends React.Component {
     const { career } = this.props;
 
     return (
-      <div>
+      <div className="container">
         <CareerList career={career} />
       </div>
     );

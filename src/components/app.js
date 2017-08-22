@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import AppRouter from "../routes";
-import Footer from "./common/footer";
+import Footer from "./common/Footer";
 
 class App extends React.Component {
   constructor(props) {

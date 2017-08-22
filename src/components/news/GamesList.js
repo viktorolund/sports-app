@@ -5,7 +5,7 @@ import GamesRow from "./GamesRow";
 
 const GamesList = ({ games }) => {
   return (
-    <div className="container">
+    <div>
       {games.map(game => <GamesRow key={game.id} game={game} />)}
     </div>
   );
