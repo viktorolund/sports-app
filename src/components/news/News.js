@@ -1,30 +1,47 @@
 import React from "react";
-import io from "socket.io-client";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
+import { loadNews } from "../../actions/newsActions";
 import NewsList from "./NewsList";
 
 class News extends React.Component {
   constructor(props) {
     super(props);
+  }
 
-    if (process.env.NODE_ENV !== "production") {
-      this.news = require("../../../server/app/news-from-db");
-    } else {
-      const socket = io();
-
-      socket.on("latest news", news => {
-        this.news = news;
-      });
-    }
+  componentDidMount() {
+    this.props.getNewActions();
   }
 
   render() {
     return (
       <div className="container">
-        {this.news && <NewsList news={this.news} />}
+        {typeof this.props.news === "object" &&
+          Object.keys(this.props.news).length > 0 &&
+          <NewsList news={this.props.news} />}
       </div>
     );
   }
 }
 
-export default News;
+News.propTypes = {
+  getNewActions: PropTypes.func,
+  news: PropTypes.object.isRequired
+};
+
+function mapStateToProps(state) {
+  return {
+    news: state.news
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    getNewActions: () => {
+      dispatch(loadNews());
+    }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(News);
