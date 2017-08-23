@@ -1,6 +1,6 @@
 import * as actionTypes from "./actionTypes";
 import { beginAjaxCall, ajaxCallError } from "./ajaxStatusActions";
-
+import axios from "axios";
 export function loadCareerSuccess(career) {
   return {
     type: actionTypes.LOAD_CAREER_SUCCESS,
@@ -22,21 +22,17 @@ export function loadCareer() {
         throw err;
       }
     } else {
-      $.ajax({
-        type: "GET",
-        url: "api/career",
-        headers: {
-          "Content-Type": "application/json"
-        }
-      }).then(
-        career => {
-          dispatch(loadCareerSuccess(career));
-        },
-        err => {
+      axios
+        .get("api/career", {
+          headers: { "Content-Type": "application/json" }
+        })
+        .then(response => {
+          dispatch(loadCareerSuccess(response.data));
+        })
+        .catch(err => {
           dispatch(ajaxCallError(err));
           throw err;
-        }
-      );
+        });
     }
   };
 }

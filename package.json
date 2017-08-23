@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/viktorolund/sports-app#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-polyfill": "^6.26.0",
     "body-parser": "^1.17.2",
     "bootstrap": "3.3.7",
