@@ -18,9 +18,6 @@ export default {
     publicPath: "/",
     filename: "[name].js"
   },
-  devServer: {
-    contentBase: "./src"
-  },
   module: {
     rules: [
       {

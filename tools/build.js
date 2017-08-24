@@ -11,10 +11,7 @@ winstonConsoleLogger.info(
 );
 
 webpack(webpackConfig).run((err, stats) => {
-  if (err) {
-    console.info(err);
-    return 1;
-  }
+  if (err) throw err;
 
   const jsonStats = stats.toJson();
 
@@ -23,7 +20,7 @@ webpack(webpackConfig).run((err, stats) => {
   }
 
   if (jsonStats.hasWarnings) {
-    jsonStats.warnings.map(warning =>
+    return jsonStats.warnings.map(warning =>
       winstonConsoleLogger.warning(
         `Webpack generated the following warnings: ${warning}`
       )
@@ -35,6 +32,4 @@ webpack(webpackConfig).run((err, stats) => {
   winstonConsoleLogger.silly(
     "Your app has been compiled in production mode and written to /dist. It's ready to roll!"
   );
-
-  return 0;
 });

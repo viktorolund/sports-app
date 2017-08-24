@@ -36,7 +36,8 @@ app.use(bodyParser.json());
 app.use("/api", routes);
 
 app.use(function(req, res, next) {
-  res.status(404).render(__dirname + "/app/error-404.html");
+  //return res.status(404).send("Not found");
+  // res.status(404).render(__dirname + "/app/error-404.html");
 });
 
 server.listen(app.get("port"), function() {
