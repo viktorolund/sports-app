@@ -14,8 +14,16 @@ app.set("port", port);
 
 app.engine("html", require("ejs").renderFile);
 
-// use dist as app root
 app.use("/", express.static(path.join(__dirname + "/../dist")));
+
+app.use("/api", routes);
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.get("*", function(req, res) {
+  res.sendFile(path.resolve(__dirname, "..", "dist", "index.html"));
+});
 
 const newsFromDB = require("./app/news-from-db");
 
@@ -27,17 +35,6 @@ io.on("connection", socket => {
   io.on("disconnect", reason => {
     console.log(reason);
   });
-});
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-// register routes
-app.use("/api", routes);
-
-app.use(function(req, res, next) {
-  //return res.status(404).send("Not found");
-  // res.status(404).render(__dirname + "/app/error-404.html");
 });
 
 server.listen(app.get("port"), function() {
