@@ -3,13 +3,10 @@ import PropTypes from "prop-types";
 
 import GamesRow from "./GamesRow";
 
-const GamesList = ({ games }) => {
-  return (
-    <div>
-      {games.map(game => <GamesRow key={game.id} game={game} />)}
-    </div>
-  );
-};
+const GamesList = ({ games }) =>
+  <div>
+    {games.map(game => <GamesRow key={game.id} game={game} />)}
+  </div>;
 
 GamesList.PropTypes = {
   games: PropTypes.array.isRequired
